@@ -1,0 +1,80 @@
+.current_page_item a {
+    background-color: #ff00dc ;
+    color: #fff;
+}
+
+ul.nav-pills>li {
+    float: none;
+}
+
+/* Mobile First Design*/
+.current_page_item a {
+    background-color: white;
+    color: #ff69b4;
+}
+ul.nav-pills>li {
+    float: none;
+}
+ul.nav-pills>li+li {
+    margin-left:  0;
+}
+ul.nav-pills>li>a {
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+/* Hide nested links in navbar */
+ul.children {
+    opacity: 0;
+    height:  0;
+    -webkit-transition: all 1s;
+    transition: all .5s;
+}
+
+li:hover>ul.children {
+    opacity:  1;
+    height:  auto;
+}
+
+li:hover>ul.children li {
+    height: auto;
+    padding: .5em 1em;
+    border:  1px solid #ff69b4;
+}
+
+li:hover>ul.children a {
+    padding:  1em;
+    height:  1.5em;
+    text-decoration: none;
+}
+li:hover ul.children li {
+    height: auto;
+    padding: .5em 1em;
+    border: 1px solid #000;
+}
+li:hover ul.children a 
+/* Toggle */
+.btn.btn-default.btn-lg.responsive toggle {
+    height: auto;
+    opacity:  1;
+}
+.children a {
+    padding:  1em;
+    height:  1.5em;
+    text-decoration: none;
+}
+/* Medium width styles */
+@media (min-width: 927px) {
+    ul.nav-pills>li {
+        float: left;
+    }
+}
+
+ul.nav-pills>li+li {
+    margin-left: 2px;
+}
+
+.btn.btn-default.btn-lg.responsive toggle {
+    height: 0;
+    opacity:  0;
+}
