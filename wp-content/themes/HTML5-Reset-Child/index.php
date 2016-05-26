@@ -5,6 +5,7 @@
  * @since HTML5 Reset 2.0
  */
  get_header(); ?>
+<!-- index.php -->
  <div class="row">
 	<section class="col-md-8">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

@@ -11,6 +11,12 @@ function theme_enqueue_styles() {
         array( $parent_style )
     );
 	
+    // Load Navigation
+
+    wp_enqueue_style( 'navigation',
+		get_stylesheet_directory_uri() . '/css/navigation.css'
+	);
+
 	// Load Bootstrap Files
 	
 	wp_enqueue_style( 'bootstrap-min',
@@ -23,10 +29,10 @@ function theme_enqueue_styles() {
 		get_stylesheet_directory_uri() . '/js/bootstap.min.js',
 		true
 	);
+    wp_enqueue_script( 'html5-reset-child',
+    get_stylesheet_directory_uri() . '/js/html5-reset-child.js',
+    FALSE, TRUE);
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 ?>
 
-body {
-	font-family: Papyrus, fantasy;
-}
