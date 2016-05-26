@@ -12,11 +12,34 @@
  Text Domain:  twenty-fifteen-child
 */
 
-html body {
-	font-family: Papyrus, fantasy;
+/* Load Web Fonts */
+    font-family: 'Paratype';
+    src: url('fonts/PTC55F.ttf') format('truetype');
+
+/* Mobile First Design */
+
+.fontface {
+	font-family: Meiryo UI, sans-serif;
 	font-size: 16px;
+}
+
+.container h1,
+.container h2,
+.container h3, {
+    font-family: 'Paratype', Calibri, sans-serif;
 }
 
 .wrapper {
 	padding: 0 1em;
+}
+
+.container {
+    width: 100%;
+}
+
+@media (min-width: 910px) {
+    .container {
+        width: 890px;
+    }
+    
 }
